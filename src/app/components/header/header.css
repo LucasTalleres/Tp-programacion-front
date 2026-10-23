@@ -1,0 +1,27 @@
+header {
+  background-color: #2f3e46;
+  color: white;
+  padding: 16px;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #435762;
+}
+
+a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}

@@ -1,0 +1,24 @@
+<h2>Formulario de Registro</h2>
+
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" type="text" formControlName="nombre">
+
+  <label for="email">Email:</label>
+  <input id="email" type="email" formControlName="email">
+
+  <div formGroupName="direccion">
+    <h3>Dirección</h3>
+
+    <label for="calle">Calle:</label>
+    <input id="calle" type="text" formControlName="calle">
+
+    <label for="ciudad">Ciudad:</label>
+    <input id="ciudad" type="text" formControlName="ciudad">
+  </div>
+
+  <button type="submit">Enviar</button>
+  <button type="button" (click)="cargarDireccion()">Cargar Dirección de Prueba</button>
+</form>
+
+<p>Estado del formulario: {{ registroForm.status }}</p>
